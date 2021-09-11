@@ -1,0 +1,96 @@
+body {
+  background-color: #161036F1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #161036FF;
+  border-radius: 1.3rem;
+  width: 70vw;
+  height: 80vh;
+  overflow: hidden;
+  border: solid 6px rgb(186, 183, 214);
+  box-shadow:  15px -16px 20px 17px #161036ff,
+              -10px 9px 20px 2px #d900c8FF;
+}
+
+.left{
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.right{
+  max-height: 100%;
+  width: 64%;
+  background-color: rgb(186, 183, 214);
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left .text{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.9rem;
+  color: rgb(186, 183, 214);
+  font-weight: 700;
+}
+
+.left .img{
+  width: 800px;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.title{
+
+}
+
+.googleSingin{
+
+}
+
+.faceeSingin{
+
+}
+
+.br{
+
+}
+
+.fullname{
+
+}
+
+.emailAddress{
+
+}
+
+.password{
+
+}
+
+.btnCreateAccount{
+
+}
+
+.gotoLogin{
+
+}
+
+.linkToLogin{
+
+}
