@@ -1,32 +1,33 @@
 body {
-  background-color: #161036F1;
+  background-color: #161036f1;
   overflow: hidden;
   display: flex;
   justify-content: center;
   margin-top: 10vh;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #161036FF;
+  background-color: #161036ff;
   border-radius: 1.3rem;
   width: 70vw;
   height: 80vh;
   overflow: hidden;
-  border: solid 6px rgb(186, 183, 214);
-  box-shadow:  15px -16px 20px 17px #161036ff,
-              -10px 9px 20px 2px #d900c8FF;
+  border: solid 0.7em rgb(186, 183, 214);
+  box-shadow: 15px -16px 20px 17px #161036ff, -10px 9px 20px 2px #d900c8ff;
+  z-index: 1;
 }
 
-.left{
+.left {
   height: 100%;
   width: 50%;
   position: relative;
+  z-index: 900;
 }
 
-.right{
+.right {
   max-height: 100%;
   width: 64%;
   background-color: rgb(186, 183, 214);
@@ -34,11 +35,12 @@ body {
   border-bottom-left-radius: 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 500;
 }
 
-.left .text{
+.left .text {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -47,7 +49,7 @@ body {
   font-weight: 700;
 }
 
-.left .img{
+.left .img {
   width: 800px;
   height: auto;
   position: absolute;
@@ -55,42 +57,167 @@ body {
   left: 0px;
 }
 
-.title{
-
+.right .title {
+  font-size: 2rem;
+  color: #161036ff;
 }
 
-.googleSingin{
-
+.socialSingin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2em;
+  width: 70%;
 }
 
-.faceeSingin{
-
+.socialSingin button {
+  width: 10em;
+  height: 3em;
+  border-radius: 1.3rem;
+  border-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+  box-shadow: 3px -3px 10px rgb(167, 163, 207), -3px 3px 10px rgb(167, 163, 207);
 }
 
-.br{
-
+.socialSingin img {
+  width: 27px;
+  height: 27px;
 }
 
-.fullname{
-
+.right .form {
+  margin-top: 4em;
 }
 
-.emailAddress{
-
+.right .br {
+  width: 100%;
+  color: grey;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1em;
 }
 
-.password{
-
+.group {
+  position: relative;
+  margin-bottom: 45px;
 }
 
-.btnCreateAccount{
-
+input {
+  font-size: 18px;
+  padding-left: 14px !important;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-radius: 1.3rem;
+  box-shadow: 3px -3px 10px rgb(167, 163, 207), -3px 3px 10px rgb(167, 163, 207);
+  background: transparent;
+}
+input:focus {
+  outline: none;
 }
 
-.gotoLogin{
-
+label {
+  color: grey;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
-.linkToLogin{
+input:focus ~ label,
+input:valid ~ label {
+  top: -24px;
+  font-size: 1.3rem;
+  color: #161036f1;
+  left: 15px;
+  font-weight: 600;
+}
 
+.bar {
+  position: relative;
+  display: block;
+  width: 302px;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  left: 14px;
+  bottom: 1px;
+  position: absolute;
+  background: #161036f1;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+  from {
+    background: #161036f1;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+.btnCreateAccount {
+  width: 100%;
+  height: 2em;
+  border-radius: 1.3rem;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161036f1;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.gotoLogin {
+  color: grey;
+  font-size: 1.2rem;
+}
+
+.linkToLogin {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #d900c8ff;
 }

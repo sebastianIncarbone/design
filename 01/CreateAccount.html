@@ -19,17 +19,32 @@
     </div>
     <div class="right">
       <h2 class="title">Create Account</h2>
-      <button class="googleSingin">Google</button>
-      <button class="faceeSingin">Facebook</button>
+      <div class="socialSingin">
+        <button class="googleSingin"><img src="./Google.png">Google</button>
+        <button class="faceSingin"><img src="./Face.png">Facebook</button>
+      </div>
       <div class="br">
         <p>-- OR --</p>
       </div>
-      <form action="post">
-
-        <input type="text" class="fullname" required>
-        <input type="email" class="emailAddress" required>
-        <input type="password" class="password" required>
-
+      <form action="post" class="form">
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Name</label>
+        </div>
+        <div class="group">      
+          <input type="text" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Email</label>
+        </div>
+        <div class="group">      
+          <input type="password" required>
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <label>Password</label>
+        </div>
         <button class="btnCreateAccount">Create Account</button>
       </form>
 
